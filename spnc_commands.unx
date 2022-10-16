@@ -1,0 +1,30 @@
+# This file contains commands to generate a shared object or DLL
+# for a natively compiled PL/SQL unit.
+# This file can have multiple commands.
+# Each command should be specified in a single line by itself terminated by
+# a newline.
+# Lines starting with a # character are comments which are ignored.
+# Each command is executed by creating (forking) a process and
+# giving the command to the process to be executed directly.
+# That means no other program (such as a shell or make) is used
+# to interpret these commands.
+# The command(s) use the following symbolic names as placeholders
+# which will be replaced by actual names before executing the command(s).
+#
+#       %(src) -  refers to the name of the generated C source file.
+#       %(obj) -  refers to the name of the generated object file.
+#       %(so)  -  refers to the name of the generated shared object file.
+
+# The variable $(ORACLE_HOME) will be replaced by its actual value
+# before executing the command(s).
+
+#/opt/SunProd/SUNWspro8/bin/cc %(src) -xO1 -Xa  -xstrconst -dalign -xF -mr -xildoff -errtags=yes -xarch=v9 -xchip=ultra3 -W2,-AKNR_S -Wd,-xsafe=unboundsym -Wc,-Qiselect-funcalign=32 -xcode=abs44 -Wc,-Qgsched-trace_late=1 -Wc,-Qgsched-T5 -KPIC -I$(ORACLE_HOME)/plsql/include -I$(ORACLE_HOME)/plsql/public -G -o %(so)
+/usr/studio11/SUNWspro/bin/cc %(src) -xO1 -Xa  -xstrconst -dalign -xF -mr -xildoff -errtags=yes -xarch=v9 -xchip=ultra3 -W2,-AKNR_S -Wd,-xsafe=unboundsym -Wc,-Qiselect-funcalign=32 -xcode=abs44 -Wc,-Qgsched-trace_late=1 -Wc,-Qgsched-T5 -Kpic -I$(ORACLE_HOME)/plsql/include -I$(ORACLE_HOME)/plsql/public -G -o %(so)
+#
+# NOTE : The following commands are for the gcc compiler. If you wish to
+#        use gcc compiler, please comment out the lines above
+#        and uncomment the lines corresponding to the gcc compiler below.
+#
+#/usr/local/packages/gcc-3.4.2/bin/gcc  -B/usr/ccs/bin %(src) -c -fPIC -mhard-float -mhard-quad-float -mcpu=v9 -DSLU8NATIVE -DSLS8NATIVE -D_REENTRANT -DSOLARIS -DSLMXMX_ENABLE -DSLTS_ENABLE -D_SVID_GETTOD -DEO_SUPPRESS_DEBUG -DEO_SUPPRESS_TRACE -O1 -m64 -I$(ORACLE_HOME)/plsql/include -I$(ORACLE_HOME)/plsql/public -o %(obj)
+#/usr/ccs/bin/ld -s -G %(obj) -o %(so)
+#/bin/rm -rf %(obj)
