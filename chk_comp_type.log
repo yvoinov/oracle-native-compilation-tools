@@ -1,0 +1,21 @@
+SQL>
+SQL> select type, plsql_code_type, count(*)
+  2  from dba_plsql_object_settings
+  3  where plsql_code_type is not null
+  4  group by type, plsql_code_type
+  5  order by type, plsql_code_type;
+
+TYPE         PLSQL_CODE_TYPE        COUNT(*)
+------------ -------------------- ----------
+FUNCTION     NATIVE                      869
+PACKAGE      NATIVE                     1653
+PACKAGE BODY NATIVE                     1589
+PROCEDURE    NATIVE                      120
+TRIGGER      NATIVE                     1875
+TYPE         INTERPRETED                1857
+TYPE BODY    NATIVE                      162
+
+7 rows selected.
+
+SQL>
+SQL> spool off

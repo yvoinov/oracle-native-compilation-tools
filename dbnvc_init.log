@@ -1,0 +1,40 @@
+SQL>
+SQL> declare
+  2
+  3   v_mode varchar2(50) := lower('&nc_mode');
+  4   v_ddl varchar2(255);
+  5   v_nc_lib_dir varchar2(255) := '&p_nc_dir';
+  6   v_dirs number := to_number('&p_subdirs');
+  7
+  8  begin
+  9   dbms_output.put_line('Native Compilation init parameters:');
+ 10   dbms_output.put_line('-----------------------------------');
+ 11   if v_mode in ('native','interpreted') and v_mode = 'native' then
+ 12    v_ddl := 'alter system set plsql_code_type=native scope=both';
+ 13   elsif v_mode in ('native','interpreted') and v_mode = 'interpret' then
+ 14    v_ddl := 'alter system set plsql_code_type=interpreted scope=both';
+ 15   end if;
+ 16    execute immediate v_ddl;
+ 17    dbms_output.put_line('plsql_code_type='||v_mode||' is set.');
+ 18   if v_mode = 'native' then
+ 19    v_ddl := 'alter system set plsql_native_library_dir='''||v_nc_lib_dir||''' scope=both';
+ 20    execute immediate v_ddl;
+ 21    dbms_output.put_line('plsql_native_library_dir='||v_nc_lib_dir||' is set.');
+ 22    v_ddl := 'alter system set plsql_native_library_subdir_count='||v_dirs||' scope=both';
+ 23    execute immediate v_ddl;
+ 24    dbms_output.put_line('plsql_native_library_subdir_count='||v_dirs||' is set.');
+ 25   end if;
+ 26  exception
+ 27   when others then raise_application_error(-20100, 'ORA'||SQLCODE||' raised.');
+ 28  end;
+ 29  /
+Native Compilation init parameters:
+-----------------------------------
+plsql_code_type=native is set.
+plsql_native_library_dir=c:\oradata\plsql_libs is set.
+plsql_native_library_subdir_count=5000 is set.
+
+PL/SQL procedure successfully completed.
+
+SQL>
+SQL> spool off

@@ -1,0 +1,472 @@
+SQL>
+SQL> select o.owner, o.object_name, o.object_type
+  2  from dba_objects o, dba_plsql_object_settings s
+  3  where o.object_name = s.name and o.status='INVALID'
+  4  order by o.owner, o.object_type;
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CHK_STATIC_BR_NO_ETG           FUNCTION
+REP_OWN      CKOVWUTL                       PACKAGE
+REP_OWN      CDWP_FIL                       PACKAGE
+REP_OWN      CDWP_FIL                       PACKAGE
+REP_OWN      CDWP_PLM                       PACKAGE
+REP_OWN      CKOOTUTL                       PACKAGE
+REP_OWN      CKOVWUTL                       PACKAGE
+REP_OWN      CKOOTUTL                       PACKAGE
+REP_OWN      CDWP_PLM                       PACKAGE
+REP_OWN      CIOREPLICATION_GROUP           PACKAGE BODY
+REP_OWN      CIOPLSQL_MOD_IMPLEMENTATION    PACKAGE BODY
+REP_OWN      RMMTXI                         PACKAGE BODY
+REP_OWN      RMOVIOLATION1                  PACKAGE BODY
+REP_OWN      RMOVIOLATION2                  PACKAGE BODY
+REP_OWN      RMOVIOLATION3                  PACKAGE BODY
+REP_OWN      RMOVIOLATION4                  PACKAGE BODY
+REP_OWN      CIMDBU                         PACKAGE BODY
+REP_OWN      CIMDSY                         PACKAGE BODY
+REP_OWN      CIMENT                         PACKAGE BODY
+REP_OWN      CKOOTUTL                       PACKAGE BODY
+REP_OWN      CIOCONSTRAINT                  PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CKOUPDDOMAIN                   PACKAGE BODY
+REP_OWN      CKOVWUTL                       PACKAGE BODY
+REP_OWN      CKUXX                          PACKAGE BODY
+REP_OWN      CK_BWALK                       PACKAGE BODY
+REP_OWN      CK_FDTREE                      PACKAGE BODY
+REP_OWN      CK_FWALK                       PACKAGE BODY
+REP_OWN      CK_UTIL                        PACKAGE BODY
+REP_OWN      CDWP                           PACKAGE BODY
+REP_OWN      CDWP_DOM                       PACKAGE BODY
+REP_OWN      CDWP_ENT                       PACKAGE BODY
+REP_OWN      CDWP_FIL                       PACKAGE BODY
+REP_OWN      CDWP_FUN                       PACKAGE BODY
+REP_OWN      CIMFIL                         PACKAGE BODY
+REP_OWN      CIMFUN                         PACKAGE BODY
+REP_OWN      CIMFUNATT                      PACKAGE BODY
+REP_OWN      CIMIND                         PACKAGE BODY
+REP_OWN      CIMKBL                         PACKAGE BODY
+REP_OWN      CIMMTI                         PACKAGE BODY
+REP_OWN      CIMMUN                         PACKAGE BODY
+REP_OWN      CIMQSU                         PACKAGE BODY
+REP_OWN      CIMTI1                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHMTI                         PACKAGE BODY
+REP_OWN      CIHMODPGD                      PACKAGE BODY
+REP_OWN      CIMCIN                         PACKAGE BODY
+REP_OWN      CIMATV                         PACKAGE BODY
+REP_OWN      CIHQPI                         PACKAGE BODY
+REP_OWN      CIHSMC                         PACKAGE BODY
+REP_OWN      CIOSNAPSHOT_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIHSNI                         PACKAGE BODY
+REP_OWN      CIHSNP                         PACKAGE BODY
+REP_OWN      CIOSEQUENCE_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIOSQL_QUERY_SET               PACKAGE BODY
+REP_OWN      CIHSQS                         PACKAGE BODY
+REP_OWN      CIOSNAPSHOT_REFRESH_GROUP      PACKAGE BODY
+REP_OWN      CIHSUB                         PACKAGE BODY
+REP_OWN      CIHSYN                         PACKAGE BODY
+REP_OWN      CIHTABENT                      PACKAGE BODY
+REP_OWN      CIOTABLE_IMPLEMENTATION        PACKAGE BODY
+REP_OWN      CIOPARTITION_KEY_ENTRY         PACKAGE BODY
+REP_OWN      CIHTBL                         PACKAGE BODY
+REP_OWN      CIHTBP                         PACKAGE BODY
+REP_OWN      CIHTRG                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHTRGCOL                      PACKAGE BODY
+REP_OWN      CIOITEM                        PACKAGE BODY
+REP_OWN      CIOJOIN_CONSTRAINT             PACKAGE BODY
+REP_OWN      CIHPCO                         PACKAGE BODY
+REP_OWN      CIHPGD                         PACKAGE BODY
+REP_OWN      CIOPLSQL_MODULE                PACKAGE BODY
+REP_OWN      CIHPLM                         PACKAGE BODY
+REP_OWN      CIORELATION_INDEX              PACKAGE BODY
+REP_OWN      CIHRIN                         PACKAGE BODY
+REP_OWN      CIHRLV                         PACKAGE BODY
+REP_OWN      CIHRMC                         PACKAGE BODY
+REP_OWN      CIHENT                         PACKAGE BODY
+REP_OWN      CIHEVT                         PACKAGE BODY
+REP_OWN      CIOGENERAL_MODULE              PACKAGE BODY
+REP_OWN      CIHGEM                         PACKAGE BODY
+REP_OWN      CIOGLOBAL_INDEX_PARTITION      PACKAGE BODY
+REP_OWN      CIHGIP                         PACKAGE BODY
+REP_OWN      CIHIGR                         PACKAGE BODY
+REP_OWN      CIODATASTRUCTURE               PACKAGE BODY
+REP_OWN      CIHDAT                         PACKAGE BODY
+REP_OWN      CIOMODULE_ARGUMENT             PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CDWP_MCO                       PACKAGE BODY
+REP_OWN      CDWP_BR                        PACKAGE BODY
+REP_OWN      CDWP_BRD                       PACKAGE BODY
+REP_OWN      CDI_NETWORK_REPORTS            PACKAGE BODY
+REP_OWN      CIOPRIMARY_ACCESS_FILE         PACKAGE BODY
+REP_OWN      CIOFOREIGN_KEY_CONSTRAINT      PACKAGE BODY
+REP_OWN      CIHFCO                         PACKAGE BODY
+REP_OWN      CIOLOCAL_INDEX_PARTITION       PACKAGE BODY
+REP_OWN      CIHLIP                         PACKAGE BODY
+REP_OWN      CIOLANGUAGE                    PACKAGE BODY
+REP_OWN      CIHLAN                         PACKAGE BODY
+REP_OWN      CIOKEY_BASED_LINK              PACKAGE BODY
+REP_OWN      CIHKBL                         PACKAGE BODY
+REP_OWN      CIOJAVA_MOD_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIODATASTRUCTURE_ITEM          PACKAGE BODY
+REP_OWN      CIHITM                         PACKAGE BODY
+REP_OWN      CIOINDEX_ENTRY                 PACKAGE BODY
+REP_OWN      CIHINDCOL                      PACKAGE BODY
+REP_OWN      CIOCLUSTER                     PACKAGE BODY
+REP_OWN      CIOINDEX_ENTRY                 PACKAGE BODY
+REP_OWN      CIOGLOBAL_INDEX_PARTITION      PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIOGENERAL_MODULE              PACKAGE BODY
+REP_OWN      CIOFUNCTION_ENTITY_USAGE       PACKAGE BODY
+REP_OWN      CIOFOREIGN_KEY_CONSTRAINT      PACKAGE BODY
+REP_OWN      CIODOMAIN                      PACKAGE BODY
+REP_OWN      CIODIRECTORY                   PACKAGE BODY
+REP_OWN      CIODATA_BOUND_ITEM             PACKAGE BODY
+REP_OWN      CIODATASTRUCTURE_ITEM          PACKAGE BODY
+REP_OWN      CIODATABASE_USER_ROLE          PACKAGE BODY
+REP_OWN      CIODATABASE_USER               PACKAGE BODY
+REP_OWN      CIODATABASE_OBJECT_GRANT       PACKAGE BODY
+REP_OWN      ODWARPRT                       PACKAGE BODY
+REP_OWN      ODWASPOT                       PACKAGE BODY
+REP_OWN      ODWASRCH                       PACKAGE BODY
+REP_OWN      CIOPRIMARY_KEY_CONSTRAINT      PACKAGE BODY
+REP_OWN      CIORELATIONSHIP_END            PACKAGE BODY
+REP_OWN      CIORELATION_DEFINITION         PACKAGE BODY
+REP_OWN      CIORELATION_INDEX              PACKAGE BODY
+REP_OWN      CIORELATION_SELECTION          PACKAGE BODY
+REP_OWN      CIOREPLICATION_GROUP           PACKAGE BODY
+REP_OWN      CIMTI1                         PACKAGE BODY
+REP_OWN      CIMTREE                        PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIMUBI                         PACKAGE BODY
+REP_OWN      CIHLAN                         PACKAGE BODY
+REP_OWN      CIHLIP                         PACKAGE BODY
+REP_OWN      CIMTREE                        PACKAGE BODY
+REP_OWN      CIMUBI                         PACKAGE BODY
+REP_OWN      JR_DEPENDENCY                  PACKAGE BODY
+REP_OWN      CIOUSER_OBJECT_INDEX_STORAGE   PACKAGE BODY
+REP_OWN      CIHUIS                         PACKAGE BODY
+REP_OWN      CIHVW                          PACKAGE BODY
+REP_OWN      CIOVIEW_IMPLEMENTATION         PACKAGE BODY
+REP_OWN      CIORELATION_SELECTION          PACKAGE BODY
+REP_OWN      CIHVWTAB                       PACKAGE BODY
+REP_OWN      CIOWINDOW                      PACKAGE BODY
+REP_OWN      CIIEXP                         PACKAGE BODY
+REP_OWN      CIIUTL                         PACKAGE BODY
+REP_OWN      CIMAPPCON                      PACKAGE BODY
+REP_OWN      CIMAPPSAC                      PACKAGE BODY
+REP_OWN      CIOINDEX_STORAGE               PACKAGE BODY
+REP_OWN      CIHATV                         PACKAGE BODY
+REP_OWN      CIHATT                         PACKAGE BODY
+REP_OWN      CIHAPV                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHAPPXXX                      PACKAGE BODY
+REP_OWN      CIHAPP                         PACKAGE BODY
+REP_OWN      CIOSQL_QUERY_SET               PACKAGE BODY
+REP_OWN      CIOSNAPSHOT_REFRESH_GROUP      PACKAGE BODY
+REP_OWN      CIOSNAPSHOT_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIOSEQUENCE_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIOLANGUAGE                    PACKAGE BODY
+REP_OWN      CIOKEY_COMPONENT               PACKAGE BODY
+REP_OWN      CIOKEY_BASED_LINK              PACKAGE BODY
+REP_OWN      CIOJOIN_CONSTRAINT             PACKAGE BODY
+REP_OWN      CIOJAVA_MOD_IMPLEMENTATION     PACKAGE BODY
+REP_OWN      CIOITEM                        PACKAGE BODY
+REP_OWN      CIOINDEX_STORAGE               PACKAGE BODY
+REP_OWN      RMOVIOLATION1                  PACKAGE BODY
+REP_OWN      RMMTXI                         PACKAGE BODY
+REP_OWN      ODWAUPLD                       PACKAGE BODY
+REP_OWN      ODWA_APP                       PACKAGE BODY
+REP_OWN      ODWA_FOL                       PACKAGE BODY
+REP_OWN      ODWACHCK                       PACKAGE BODY
+REP_OWN      ODWACHKI                       PACKAGE BODY
+REP_OWN      CIHMODMOD                      PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHMODPGD                      PACKAGE BODY
+REP_OWN      CIHMTI                         PACKAGE BODY
+REP_OWN      CIHOKY                         PACKAGE BODY
+REP_OWN      CIHORC                         PACKAGE BODY
+REP_OWN      CIHOSQ                         PACKAGE BODY
+REP_OWN      CIHPCO                         PACKAGE BODY
+REP_OWN      CIHPGD                         PACKAGE BODY
+REP_OWN      CIHPLM                         PACKAGE BODY
+REP_OWN      CIHQPI                         PACKAGE BODY
+REP_OWN      CIHRELEND                      PACKAGE BODY
+REP_OWN      CIHRIN                         PACKAGE BODY
+REP_OWN      CIHRLV                         PACKAGE BODY
+REP_OWN      CIHRMC                         PACKAGE BODY
+REP_OWN      CIOTABLESPACE                  PACKAGE BODY
+REP_OWN      CIOTABLESPACE_QUOTA            PACKAGE BODY
+REP_OWN      CIOTABLE_ENTITY                PACKAGE BODY
+REP_OWN      CIOTABLE_IMPLEMENTATION        PACKAGE BODY
+REP_OWN      JR_DEPENDENCY                  PACKAGE BODY
+REP_OWN      ODWAPROP                       PACKAGE BODY
+REP_OWN      CIHDFL                         PACKAGE BODY
+REP_OWN      CIHDBI                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHDAT                         PACKAGE BODY
+REP_OWN      CIHCOL                         PACKAGE BODY
+REP_OWN      ODWAGRPH                       PACKAGE BODY
+REP_OWN      ODWAINFO                       PACKAGE BODY
+REP_OWN      CIOLOCAL_INDEX_PARTITION       PACKAGE BODY
+REP_OWN      CIOMODULE                      PACKAGE BODY
+REP_OWN      CIOMODULE_ARGUMENT             PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT            PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT_INCLUSION  PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT_LINK       PACKAGE BODY
+REP_OWN      CIOMODULE_NETWORK              PACKAGE BODY
+REP_OWN      CIONODE                        PACKAGE BODY
+REP_OWN      CIOUNBOUND_ITEM                PACKAGE BODY
+REP_OWN      CIOUNIQUE_IDENTIFIER           PACKAGE BODY
+REP_OWN      CIOUNIQUE_IDENTIFIER_ENTRY     PACKAGE BODY
+REP_OWN      CIOUNIQUE_KEY_CONSTRAINT       PACKAGE BODY
+REP_OWN      CIOUSER_OBJECT_INDEX_STORAGE   PACKAGE BODY
+REP_OWN      CIODATASTRUCTURE               PACKAGE BODY
+REP_OWN      CIHVWTAB                       PACKAGE BODY
+REP_OWN      CIHVW                          PACKAGE BODY
+REP_OWN      CIIEXP                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIOCONSTRAINT                  PACKAGE BODY
+REP_OWN      CDWP                           PACKAGE BODY
+REP_OWN      CDWP_BR                        PACKAGE BODY
+REP_OWN      CDWP_BRD                       PACKAGE BODY
+REP_OWN      CDWP_DIA                       PACKAGE BODY
+REP_OWN      CDWP_DOM                       PACKAGE BODY
+REP_OWN      CDWP_ENT                       PACKAGE BODY
+REP_OWN      CDWP_FIL                       PACKAGE BODY
+REP_OWN      CDWP_FUN                       PACKAGE BODY
+REP_OWN      CDWP_MCO                       PACKAGE BODY
+REP_OWN      CDWP_MDE                       PACKAGE BODY
+REP_OWN      CDWP_PLM                       PACKAGE BODY
+REP_OWN      CIHSMC                         PACKAGE BODY
+REP_OWN      CIHSNI                         PACKAGE BODY
+REP_OWN      CIHSNP                         PACKAGE BODY
+REP_OWN      CIHSQS                         PACKAGE BODY
+REP_OWN      CIHSUB                         PACKAGE BODY
+REP_OWN      CIHSYN                         PACKAGE BODY
+REP_OWN      CIHTABENT                      PACKAGE BODY
+REP_OWN      CIHTBL                         PACKAGE BODY
+REP_OWN      CIHTBP                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIOORACLE_DATABASE             PACKAGE BODY
+REP_OWN      CIOPARTITION_KEY_ENTRY         PACKAGE BODY
+REP_OWN      CIOPASSED_VALUE                PACKAGE BODY
+REP_OWN      CIOPLSQL_MODULE                PACKAGE BODY
+REP_OWN      CIOPLSQL_MOD_IMPLEMENTATION    PACKAGE BODY
+REP_OWN      CIOPRIMARY_ACCESS_FILE         PACKAGE BODY
+REP_OWN      CIOARGUMENT_PASSED_VALUE       PACKAGE BODY
+REP_OWN      CIOATTRIBUTE                   PACKAGE BODY
+REP_OWN      CIIUTL                         PACKAGE BODY
+REP_OWN      CIMAPPCON                      PACKAGE BODY
+REP_OWN      CIMAPPSAC                      PACKAGE BODY
+REP_OWN      CIMATV                         PACKAGE BODY
+REP_OWN      CIMCIN                         PACKAGE BODY
+REP_OWN      CIMDBU                         PACKAGE BODY
+REP_OWN      CIMDSY                         PACKAGE BODY
+REP_OWN      CIHLVI                         PACKAGE BODY
+REP_OWN      CIHMAP                         PACKAGE BODY
+REP_OWN      CIHMCH                         PACKAGE BODY
+REP_OWN      CIHMCN                         PACKAGE BODY
+REP_OWN      CIHTRG                         PACKAGE BODY
+REP_OWN      CIHTRGCOL                      PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHUBI                         PACKAGE BODY
+REP_OWN      CIHUCO                         PACKAGE BODY
+REP_OWN      CIHUID                         PACKAGE BODY
+REP_OWN      CIHUIS                         PACKAGE BODY
+REP_OWN      CIFUN1                         PACKAGE BODY
+REP_OWN      CIDFL1                         PACKAGE BODY
+REP_OWN      CICOL1                         PACKAGE BODY
+REP_OWN      CDWP_VW                        PACKAGE BODY
+REP_OWN      CIHKBL                         PACKAGE BODY
+REP_OWN      CIHITM                         PACKAGE BODY
+REP_OWN      CIHINDCOL                      PACKAGE BODY
+REP_OWN      CIHIGR                         PACKAGE BODY
+REP_OWN      CIHGIP                         PACKAGE BODY
+REP_OWN      CIHGEM                         PACKAGE BODY
+REP_OWN      CIHFUNENT                      PACKAGE BODY
+REP_OWN      CIHFUNATT                      PACKAGE BODY
+REP_OWN      CIHFUN                         PACKAGE BODY
+REP_OWN      CIHFCO                         PACKAGE BODY
+REP_OWN      CIHEVT                         PACKAGE BODY
+REP_OWN      CIHENT                         PACKAGE BODY
+REP_OWN      CIHDSTATT                      PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHDST                         PACKAGE BODY
+REP_OWN      CIHDIA                         PACKAGE BODY
+REP_OWN      CIHDFLATT                      PACKAGE BODY
+REP_OWN      CIOCLUSTER_INDEX               PACKAGE BODY
+REP_OWN      CIOCLUSTER_COLUMN              PACKAGE BODY
+REP_OWN      CIOCLUSTER                     PACKAGE BODY
+REP_OWN      CIOCHECK_CONSTRAINT            PACKAGE BODY
+REP_OWN      JR_ICON                        PACKAGE BODY
+REP_OWN      CIOCHANGE_HISTORY              PACKAGE BODY
+REP_OWN      CDWP_TBL                       PACKAGE BODY
+REP_OWN      CDWP_TER                       PACKAGE BODY
+REP_OWN      RMOVIOLATION2                  PACKAGE BODY
+REP_OWN      RMOVIOLATION3                  PACKAGE BODY
+REP_OWN      RMOVIOLATION4                  PACKAGE BODY
+REP_OWN      CIOVIEW_IMPLEMENTATION         PACKAGE BODY
+REP_OWN      CIOWINDOW                      PACKAGE BODY
+REP_OWN      CKODSZ                         PACKAGE BODY
+REP_OWN      CKOFUNATT                      PACKAGE BODY
+REP_OWN      CKOMENU                        PACKAGE BODY
+REP_OWN      CKOOTUTL                       PACKAGE BODY
+REP_OWN      CKOUPDDOMAIN                   PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CKOVWUTL                       PACKAGE BODY
+REP_OWN      CKUXX                          PACKAGE BODY
+REP_OWN      CK_BWALK                       PACKAGE BODY
+REP_OWN      CK_FDTREE                      PACKAGE BODY
+REP_OWN      CK_FWALK                       PACKAGE BODY
+REP_OWN      CK_UTIL                        PACKAGE BODY
+REP_OWN      CDWPBASE                       PACKAGE BODY
+REP_OWN      CDI_NETWORK_REPORTS            PACKAGE BODY
+REP_OWN      CDAPI                          PACKAGE BODY
+REP_OWN      CIMENT                         PACKAGE BODY
+REP_OWN      CIMFIL                         PACKAGE BODY
+REP_OWN      CIMFUN                         PACKAGE BODY
+REP_OWN      CIMFUNATT                      PACKAGE BODY
+REP_OWN      CIMIND                         PACKAGE BODY
+REP_OWN      CIMKBL                         PACKAGE BODY
+REP_OWN      CIMMTI                         PACKAGE BODY
+REP_OWN      CIMMUN                         PACKAGE BODY
+REP_OWN      CIMQSU                         PACKAGE BODY
+REP_OWN      CIOROLE                        PACKAGE BODY
+REP_OWN      CIOROLE_GRANT                  PACKAGE BODY
+REP_OWN      ODWACHCK                       PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      ODWACHKI                       PACKAGE BODY
+REP_OWN      ODWAGRPH                       PACKAGE BODY
+REP_OWN      ODWAINFO                       PACKAGE BODY
+REP_OWN      ODWAPROP                       PACKAGE BODY
+REP_OWN      ODWARPRT                       PACKAGE BODY
+REP_OWN      ODWASPOT                       PACKAGE BODY
+REP_OWN      ODWASRCH                       PACKAGE BODY
+REP_OWN      ODWAUPLD                       PACKAGE BODY
+REP_OWN      ODWA_APP                       PACKAGE BODY
+REP_OWN      ODWA_FOL                       PACKAGE BODY
+REP_OWN      CIHLVI                         PACKAGE BODY
+REP_OWN      CIHMAP                         PACKAGE BODY
+REP_OWN      CIOCHANGE_HISTORY              PACKAGE BODY
+REP_OWN      CIHMCH                         PACKAGE BODY
+REP_OWN      CIHMCN                         PACKAGE BODY
+REP_OWN      CIHMODMOD                      PACKAGE BODY
+REP_OWN      CIDFL1                         PACKAGE BODY
+REP_OWN      CIFUN1                         PACKAGE BODY
+REP_OWN      CIOKEY_COMPONENT               PACKAGE BODY
+REP_OWN      CIHOKY                         PACKAGE BODY
+REP_OWN      CIOORACLE_DATABASE             PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHORC                         PACKAGE BODY
+REP_OWN      CIHOSQ                         PACKAGE BODY
+REP_OWN      CIOTABLESPACE                  PACKAGE BODY
+REP_OWN      CIOMODULE                      PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT            PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT_INCLUSION  PACKAGE BODY
+REP_OWN      CIOMODULE_COMPONENT_LINK       PACKAGE BODY
+REP_OWN      CIOMODULE_NETWORK              PACKAGE BODY
+REP_OWN      CIONODE                        PACKAGE BODY
+REP_OWN      CIOPASSED_VALUE                PACKAGE BODY
+REP_OWN      CIOPRIMARY_KEY_CONSTRAINT      PACKAGE BODY
+REP_OWN      CIORELATIONSHIP_END            PACKAGE BODY
+REP_OWN      CIORELATION_DEFINITION         PACKAGE BODY
+REP_OWN      CIOROLE                        PACKAGE BODY
+REP_OWN      CIOROLE_GRANT                  PACKAGE BODY
+REP_OWN      CIOTABLE_ENTITY                PACKAGE BODY
+REP_OWN      CIOUNIQUE_IDENTIFIER_ENTRY     PACKAGE BODY
+REP_OWN      CIOUNIQUE_KEY_CONSTRAINT       PACKAGE BODY
+REP_OWN      CKODSZ                         PACKAGE BODY
+REP_OWN      CDAPI                          PACKAGE BODY
+REP_OWN      CKOFUNATT                      PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CKOMENU                        PACKAGE BODY
+REP_OWN      JR_ICON                        PACKAGE BODY
+REP_OWN      CIHCOL                         PACKAGE BODY
+REP_OWN      CIODOMAIN                      PACKAGE BODY
+REP_OWN      CIODATABASE_OBJECT_GRANT       PACKAGE BODY
+REP_OWN      CIODIRECTORY                   PACKAGE BODY
+REP_OWN      CIHDIA                         PACKAGE BODY
+REP_OWN      CIOFUNCTION_ENTITY_USAGE       PACKAGE BODY
+REP_OWN      CIHFUNENT                      PACKAGE BODY
+REP_OWN      CIHFUNATT                      PACKAGE BODY
+REP_OWN      CIHFUN                         PACKAGE BODY
+REP_OWN      CDWP_MDE                       PACKAGE BODY
+REP_OWN      CDWP_PLM                       PACKAGE BODY
+REP_OWN      CDWP_TBL                       PACKAGE BODY
+REP_OWN      CDWP_TER                       PACKAGE BODY
+REP_OWN      CDWPBASE                       PACKAGE BODY
+REP_OWN      CDWP_VW                        PACKAGE BODY
+REP_OWN      CICOL1                         PACKAGE BODY
+REP_OWN      CDWP_DIA                       PACKAGE BODY
+REP_OWN      CIOATTRIBUTE                   PACKAGE BODY
+REP_OWN      CIHATT                         PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHATV                         PACKAGE BODY
+REP_OWN      CIHAPP                         PACKAGE BODY
+REP_OWN      CIHAPPXXX                      PACKAGE BODY
+REP_OWN      CIOARGUMENT_PASSED_VALUE       PACKAGE BODY
+REP_OWN      CIHAPV                         PACKAGE BODY
+REP_OWN      CIOCLUSTER_COLUMN              PACKAGE BODY
+REP_OWN      CIOCHECK_CONSTRAINT            PACKAGE BODY
+REP_OWN      CIOCLUSTER_INDEX               PACKAGE BODY
+REP_OWN      CIODATA_BOUND_ITEM             PACKAGE BODY
+REP_OWN      CIHDBI                         PACKAGE BODY
+REP_OWN      CIODATABASE_USER               PACKAGE BODY
+REP_OWN      CIODATABASE_USER_ROLE          PACKAGE BODY
+REP_OWN      CIHDFL                         PACKAGE BODY
+REP_OWN      CIHDFLATT                      PACKAGE BODY
+REP_OWN      CIHDST                         PACKAGE BODY
+REP_OWN      CIHDSTATT                      PACKAGE BODY
+REP_OWN      CIOTABLESPACE_QUOTA            PACKAGE BODY
+REP_OWN      CIOUNBOUND_ITEM                PACKAGE BODY
+REP_OWN      CIHUBI                         PACKAGE BODY
+REP_OWN      CIHUCO                         PACKAGE BODY
+REP_OWN      CIOUNIQUE_IDENTIFIER           PACKAGE BODY
+
+OWNER        OBJECT_NAME                    OBJECT_TYPE
+------------ ------------------------------ ------------------
+REP_OWN      CIHUID                         PACKAGE BODY
+REP_OWN      CIHRELEND                      PACKAGE BODY
+WK_TEST      BIN$IO7cLpvkUBTgRAADuhDQhg==$0 TRIGGER
+
+402 rows selected.
+
+SQL>
+SQL> spool off

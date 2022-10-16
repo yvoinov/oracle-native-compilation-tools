@@ -1,0 +1,13 @@
+SQL>
+SQL> select count(*) as "INVALID OBJ-PB,PROC,FUNC,TRG"
+  2  --object_name,owner, object_type
+  3   from dba_objects where status = 'INVALID'
+  4   and object_type IN ('PACKAGE BODY','PROCEDURE','FUNCTION','TRIGGER')
+  5   and owner = 'SYS';
+
+INVALID OBJ-PB,PROC,FUNC,TRG
+----------------------------
+                           1
+
+SQL>
+SQL> spool off
